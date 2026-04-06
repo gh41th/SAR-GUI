@@ -6,6 +6,7 @@ Run this file to launch the application.
 import sys
 from PyQt5.QtWidgets import QApplication
 from ui.main_window import MainWindow
+from ui.theme import apply_theme
 
 
 def main():
@@ -13,8 +14,12 @@ def main():
     # sys.argv lets Qt handle command-line arguments (you can ignore this for now).
     app = QApplication(sys.argv)
 
-    # Set a global application style. "Fusion" is clean and cross-platform.
+    # Set a global application style. "Fusion" is the best base for custom QSS.
+    # Always set this BEFORE applying a stylesheet.
     app.setStyle("Fusion")
+
+    # Apply our custom dark theme (defined in ui/theme.py)
+    apply_theme(app, "light")
 
     # Create and show the main window
     window = MainWindow()
