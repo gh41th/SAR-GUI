@@ -19,7 +19,7 @@ def main():
     app.setStyle("Fusion")
 
     # Apply our custom dark theme (defined in ui/theme.py)
-    apply_theme(app, "light")
+    apply_theme(app, "dark")
 
     # Create and show the main window
     window = MainWindow()

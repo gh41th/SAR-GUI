@@ -73,3 +73,6 @@ class LayerPanel(QDockWidget):
 
     def clear_layers(self):
         self.tree.clear()
+        
+
+
